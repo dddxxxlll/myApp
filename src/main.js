@@ -8,6 +8,7 @@ import VueResource from 'vue-resource';
 import goods from './components/goods/goods.vue';
 import ratings from './components/ratings/ratings.vue';
 import seller from './components/seller/seller.vue';
+import './common/stylus/index.styl';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 // let app = Vue.extend(App);
@@ -23,7 +24,8 @@ const routes = [
   {path: '/seller', component: seller}
 ];
 const router = new VueRouter({
-  routes
+  routes,
+  linkActiveClass: 'active'
 });
 // router.start(app, '#app');
 // const app =
@@ -34,4 +36,5 @@ new Vue({
   router
   // render: h => h(App)
 }).$mount('#app');
-router.push(goods);
+router.push('/goods');
+
