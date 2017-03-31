@@ -1,6 +1,6 @@
-# my-app
+# 外卖app
 
-> my app project
+> vue好好玩啊，大家快来用呀！
 
 ## Build Setup
 

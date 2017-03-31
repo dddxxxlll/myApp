@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c22703cd-58c3-453f-a522-5229591a2c03" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/goods/goods.vue" afterPath="$PROJECT_DIR$/src/components/goods/goods.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="goods.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="goods.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/goods/goods.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
@@ -50,6 +48,16 @@
                 <element signature="e#4914#5386#0" expanded="false" />
                 <element signature="e#6456#6727#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/components/shopcart/shopcart.vue" />
         <option value="$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue" />
         <option value="$PROJECT_DIR$/src/components/goods/goods.vue" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -489,12 +498,12 @@
       <workItem from="1490345534066" duration="4502000" />
       <workItem from="1490684600922" duration="11407000" />
       <workItem from="1490778811822" duration="3671000" />
-      <workItem from="1490940990200" duration="13204000" />
+      <workItem from="1490940990200" duration="13307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95503000" />
+    <option name="totallyTimeSpent" value="95606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -506,7 +515,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="804" y="48" width="986" height="944" extended-state="0" />
+    <frame x="804" y="48" width="986" height="944" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31962025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -539,13 +548,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Hello.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -848,6 +850,14 @@
             <element signature="e#4914#5386#0" expanded="false" />
             <element signature="e#6456#6727#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
