@@ -20,12 +20,17 @@
       }
     },
     methods: {
-      addCart() {
+      addCart(event) {
+        if (!event._constructed) {
+          return;
+        }
         if (!this.food.count) {
           Vue.set(this.food, 'count', 1);
         } else {
           this.food.count++;
         }
+        // this.$root.eventHub.$emit('add', event.target)
+        this.$emit('add', event.target);
       },
       decreaseCart() {
         if (this.food.count) {
@@ -40,20 +45,19 @@
   .cartcontrol
     font-size 0
     .cart-decrease
-      transition all .4s linear
+      opacity 1
       display inline-block
       padding 6px
+      transform translate3D(0, 0, 0)
       .inner
+        display inline-block
         line-height 24px
         font-size 24px
         color rgb(0, 160, 220)
         transition all .4s linear
+        transform rotate(0)
       &.move-enter-active, &.move-leave-active
-        opacity 1
-        transform translate3D(0, 0, 0)
-        .inner
-          display inline-block
-          transform rotate(0)
+        transition all 0.4s linear
       &.move-enter, &.move-leave-active
         transform translate3D(24px, 0, 0)
         opacity 0

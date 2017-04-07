@@ -33,7 +33,10 @@ const router = new VueRouter({
 new Vue({
   template: '<App/>',
   components: {App},
-  router
+  router,
+  data: {
+    eventHub: new Vue()
+  }
   // render: h => h(App)
 }).$mount('#app');
 router.push('/goods');

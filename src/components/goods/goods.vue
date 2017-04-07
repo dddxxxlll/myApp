@@ -28,7 +28,7 @@
                   <span class="now">￥{{food.price}}</span><span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  <cartcontrol :food="food"></cartcontrol>
+                  <cartcontrol @add="addFood" :food="food"></cartcontrol>
                 </div>
               </div>
             </li>
@@ -36,7 +36,7 @@
         </li>
       </ul>
     </div>
-    <shopcart :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></shopcart>
+    <shopcart ref="shopcart" :select-foods="selectFoods" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></shopcart>
   </div>
 </template>
 
@@ -128,6 +128,15 @@
         let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook');
         let el = foodList[index];
         this.foodsScroll.scrollToElement(el, 300);
+      },
+      addFood(target) {
+        this._drop(target);
+      },
+      _drop(target) {
+        // 体验优化，异步执行下落动画
+        this.$nextTick(() => {
+          this.$refs.shopcart.drop(target);
+        });
       }
     },
     components: {
@@ -192,58 +201,58 @@
           font-size 12px
     .foods-wrapper
       flex 1
-    .title
-      padding-left 14px
-      height 26px
-      line-height 26px
-      border-left 2px solid #d9dde1
-      font-size 12px
-      color rgb(147, 153, 159)
-      background #f3f5f7
-    .food-item
-      display flex
-      margin 18px
-      padding-bottom 18px
-      border-1px(rgba(7, 17, 27, 0.1))
-      &:last-child
-        border-none()
-        margin-bottom 0
-      .icon
-        flex 0 0 57px
-        margin-right 10px
-      .content
-        flex 1
-        .name
-          font-size 14px
-          margin 2px 0 8px 0
-          height 14px
-          line-height 14px
-          color rgb(7, 17, 27)
-        .desc,.extra
-          line-height 10px
-          font-size 10px
-          color rgb(147, 153, 159)
-        .desc
-          margin-bottom 8px
-          line-height 12px
-        .extra
-          .count
-            margin-right 12px
-        .price
-          font-weight 700
-          line-height 24px
-          .now
-            margin-right 18px
+      .title
+        padding-left 14px
+        height 26px
+        line-height 26px
+        border-left 2px solid #d9dde1
+        font-size 12px
+        color rgb(147, 153, 159)
+        background #f3f5f7
+      .food-item
+        display flex
+        margin 18px
+        padding-bottom 18px
+        border-1px(rgba(7, 17, 27, 0.1))
+        &:last-child
+          border-none()
+          margin-bottom 0
+        .icon
+          flex 0 0 57px
+          margin-right 10px
+        .content
+          flex 1
+          .name
             font-size 14px
-            color rgb(240, 20, 20)
-          .old
-            text-decoration line-through
+            margin 2px 0 8px 0
+            height 14px
+            line-height 14px
+            color rgb(7, 17, 27)
+          .desc,.extra
+            line-height 10px
             font-size 10px
             color rgb(147, 153, 159)
+          .desc
+            margin-bottom 8px
+            line-height 12px
+          .extra
+            .count
+              margin-right 12px
+          .price
+            font-weight 700
+            line-height 24px
+            .now
+              margin-right 18px
+              font-size 14px
+              color rgb(240, 20, 20)
+            .old
+              text-decoration line-through
+              font-size 10px
+              color rgb(147, 153, 159)
 
 
-        .cartcontrol-wrapper
-          position absolute
-          right 0
-          bottom 12px
+          .cartcontrol-wrapper
+            position absolute
+            right 0
+            bottom 12px
 </style>
